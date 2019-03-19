@@ -1,0 +1,32 @@
+$standardSpaces: (0, 0.25em, 0.5em, 1em, 2em, 3em, 4em);
+$standardBorderSizes: ((1px, "default"), 2px, 3px, 4px, 5px, 6px);
+$sizes: (auto, 25%, 50%, 75%, 100%);
+$directions: ("", top, right, bottom, left);
+
+$directionsShortForm: (
+    "": "",
+    top: t,
+    right: r,
+    bottom: b,
+    left: l
+);
+
+$colorStandard: #dee2e6;
+$COLORS: (
+    primary: #007bff,
+    secondary: #6c757d,
+    success: #28a745,
+    danger: #dc3545,
+    warning: #ffc107,
+    info: #17a2b8,
+    light: #f8f9fa,
+    dark: #343a40
+);
+$colorPrimary: #007bff;
+$colorSecondary: #6c757d;
+$colorSuccess: #28a745;
+$colorDanger: #dc3545;
+$colorWarning: #ffc107;
+$colorInfo: #17a2b8;
+$colorLight: #f8f9fa;
+$colorDark: #343a40;

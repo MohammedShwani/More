@@ -1,0 +1,231 @@
+@import "variables.scss";
+@import "helper.scss";
+
+@mixin margin($direction: "") {
+    $directionForCss: "";
+    @if $direction != "" {
+        $directionForCss: map-get($directionsShortForm, $direction);
+        $direction : "-" + $direction;
+    }
+
+    @for $i from 0 to 7 {
+        .m-m#{$directionForCss}#{$i} {
+            margin#{$direction}: nth($standardSpaces, $i+1) !important;
+        }
+    }
+}
+
+@mixin padding($direction: "") {
+    $directionForCss: "";
+    @if $direction != "" {
+        $directionForCss: map-get($directionsShortForm, $direction);
+        $direction : "-" + $direction;
+    }
+
+    @for $i from 0 to 7 {
+        .m-p#{$directionForCss}-#{$i} {
+            padding#{$direction}: nth($standardSpaces, $i+1) !important;
+        }
+    }
+}
+
+@mixin shadow($color: "", $colorName: "") {
+    $colorName: "-" + $colorName;
+    @if $color == "" {
+        $color: #000;
+        $colorName: ""
+    }
+
+    .m-shadow#{$colorName}-sm {
+        -webkit-box-shadow: 0 .125rem .25rem rgba($color,.075) !important;
+        box-shadow: 0 .125rem .25rem rgba($color,.075) !important;
+    }
+    .m-shadow#{$colorName} {
+        -webkit-box-shadow: 0 .5rem 1rem rgba($color,.15) !important;
+        box-shadow: 0 .5rem 1rem rgba($color,.15) !important;
+    }
+    .m-shadow#{$colorName}-lg {
+        -webkit-box-shadow: 0 1rem 3rem rgba($color,.175) !important;
+        box-shadow: 0 1rem 3rem rgba($color,.175) !important;
+    }
+}
+
+
+@include margin();
+@include margin(top);
+@include margin(right);
+@include margin(bottom);
+@include margin(left);
+
+@include padding();
+@include padding(top);
+@include padding(right);
+@include padding(bottom);
+@include padding(left);
+
+///////////////////////////////////////////////////////////////////////////////
+//text color
+
+@each $name, $value in $COLORS {
+    .m-text-#{$name} {
+        color: $value !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//background color
+
+@each $name, $value in $COLORS {
+    .m-bg-#{$name} {
+        background-color: $value !important;
+    }
+}
+.m-bg-white {
+    background-color: #fff !important;
+}
+.m-bg-transparent {
+    background-color: transparent !important;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//shadow
+
+.m-shadow-none {
+    box-shadow: none !important;
+}
+@include shadow();
+@include shadow($colorPrimary, "primary");
+@include shadow($colorSecondary, "secondary");
+@include shadow($colorSuccess, "success");
+@include shadow($colorDanger, "danger");
+@include shadow($colorWarning, "warning");
+@include shadow($colorInfo, "info");
+@include shadow($colorLight, "light");
+
+///////////////////////////////////////////////////////////////////////////////
+//borders
+//adds border for all and each direction with zero for each
+
+@each $direction in $directions {
+    $directionClassName: map-get($directionsShortForm, $direction);
+    $directionCssName: $direction;
+    $seprator: "-";
+    @if $direction == "" {
+        $directionCssName: "";
+        $directionClassName: "";
+        $seprator: "";
+    }
+
+    //normal border
+    .m-border#{$seprator + $directionClassName} {
+        border#{$seprator + $directionCssName}: 1px solid $colorStandard !important;
+    }
+    //zero border for that direction
+    .m-border-#{$directionClassName}0 {
+        border#{$seprator + $directionCssName}: 0 !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//border colors
+
+@each $name, $value in $COLORS {
+    .m-border-#{$name} {
+        border-color: $value !important;
+    }
+}
+.m-border-white {
+    border-color: #fff !important;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//border width
+
+@each $size in $standardBorderSizes {
+    $sizeValue: $size;
+    $sizeName: "-" + stripUnit($sizeValue);
+    @if type-of($sizeValue) == list {
+        $sizeValue: nth($sizeValue, 1);
+        $sizeName: "";
+    }
+
+    .m-border#{$sizeName} {
+        border-width: $sizeValue !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//radius
+
+.m-rounded-0 {
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+.m-rounded {
+    -webkit-border-radius: 0.3em !important;
+    border-radius: 0.3em !important;
+}
+.m-rounded-t {
+    -webkit-border-top-left-radius: 0.3em !important;
+    -webkit-border-top-right-radius: 0.3em !important;
+    border-top-left-radius: 0.3em !important;
+    border-top-right-radius: 0.3em !important;
+}
+.m-rounded-r {
+    -webkit-border-top-right-radius: 0.3em !important;
+    -webkit-border-bottom-right-radius: 0.3em !important;
+    border-top-right-radius: 0.3em !important;
+    border-bottom-right-radius: 0.3em !important;
+}
+.m-rounded-b {
+    -webkit-border-bottom-left-radius: 0.3em !important;
+    -webkit-border-bottom-right-radius: 0.3em !important;
+    border-bottom-left-radius: 0.3em !important;
+    border-bottom-right-radius: 0.3em !important;
+}
+.m-rounded-l {
+    -webkit-border-top-left-radius: 0.3em !important;
+    -webkit-border-bottom-left-radius: 0.3em !important;
+    border-top-left-radius: 0.3em !important;
+    border-bottom-left-radius: 0.3em !important;
+}
+.m-rounded-circle {
+    -webkit-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+.m-rounded-pill {
+    -webkit-border-radius: 50rem !important;
+    border-radius: 50rem !important;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//width
+
+@each $size in $sizes {
+    .m-w-#{stripUnit($size)} {
+        width: $size !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//height
+
+@each $size in $sizes {
+    .m-h-#{stripUnit($size)} {
+        height: $size !important;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+.m-clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.m-float-l {
+    float: left !important;
+}
+.m-float-r {
+    float: right !important;
+}
