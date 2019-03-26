@@ -1,0 +1,22 @@
+@import "../variables.scss";
+@import "../helper.scss";
+
+
+@each $deviceName, $deviceValue in $deviceSizes {
+    $spacer: "-";
+    @if $deviceName == "" {
+        $spacer: "";
+    }
+
+    @include mediaDevice($deviceValue) {
+        .m-float#{$spacer + $deviceName}-l  {
+            float: left !important;
+        }
+        .m-float#{$spacer + $deviceName}-r {
+            float: right !important;
+        }
+        .m-float#{$spacer + $deviceName}-none  {
+            float: none !important;
+        }
+    }
+}

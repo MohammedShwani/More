@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+//background color
+@each $name, $value in $COLORS {
+    .m-bg-#{$name} {
+        background-color: $value !important;
+    }
+}
+
+.m-bg-transparent {
+    background-color: transparent !important;
+}

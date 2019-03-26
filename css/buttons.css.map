@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,MAAO;EACH,OAAO,EAAE,GAAG",
-"sources": ["../sass/buttons.scss"],
-"names": [],
-"file": "buttons.css"
-}

@@ -1,0 +1,7 @@
+@import "../variables.scss";
+
+@each $value in $overflows {
+    .m-overflow-#{$value} {
+        overflow: $value !important; 
+    }
+}

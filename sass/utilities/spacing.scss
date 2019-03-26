@@ -1,0 +1,82 @@
+@import "../variables.scss";
+@import "../helper.scss";
+
+
+//padding and margin
+@mixin generateMarginAndPadding($deviceSize: "") {
+
+    @each $prop, $abrr in (margin: m, padding: p) {
+        @each $direction, $directionAbbr in $directions {
+            @each $space, $value in $spacers {
+                $spacer: "-";
+                @if $direction == "" {
+                    $spacer: ""
+                }
+    
+                .m-#{$abrr}#{$directionAbbr}#{$deviceSize}-#{$space} {
+                    #{$prop}#{$spacer + $direction}: $value !important;
+                }
+            }
+        }
+    }
+
+}
+
+
+//negative margin (Eg: m-mr-n1 instead of m-mr-1)
+@mixin generateNegativeMargin($deviceSize: "") {
+
+    @each $direction, $directionAbbr in $directions {
+        @each $space, $value in $spacers {
+            @if $value != 0 {
+                $spacer: "-";
+                @if $direction == "" {
+                    $spacer: ""
+                }
+
+                .m-m#{$directionAbbr}#{$deviceSize}-n#{$space} {
+                    margin#{$spacer + $direction}: -$value !important;
+                }
+            }
+        }
+    }
+
+}
+
+
+@include generateMarginAndPadding;
+@include generateNegativeMargin;
+// @include for-sm-up {
+//     @include generateMarginAndPadding("-sm");
+// }
+// @include for-md-up {
+//     @include generateMarginAndPadding("-md");
+// }
+// @include for-lg-up {
+//     @include generateMarginAndPadding("-lg");
+// }
+// @include for-xl-up {
+//     @include generateMarginAndPadding("-xl");
+// }
+
+
+//some spacial margin
+.m-m-auto {
+    margin: auto !important;
+}
+.m-mt-auto,
+.m-my-auto {
+    margin-top: auto !important;
+}
+.m-mr-auto,
+.m-mx-auto {
+    margin-right: auto !important;
+}
+.m-mb-auto,
+.m-my-auto {
+    margin-bottom: auto !important;
+}
+.m-ml-auto,
+.m-mx-auto {
+    margin-left: auto !important;
+}

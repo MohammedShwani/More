@@ -1,27 +1,57 @@
-$standardSpaces: (0, 0.25em, 0.5em, 1em, 2em, 3em, 4em);
-$standardBorderSizes: ((1px, "default"), 2px, 3px, 4px, 5px, 6px);
-$sizes: (auto, 25%, 50%, 75%, 100%);
-$directions: ("", top, right, bottom, left);
-
-$directionsShortForm: (
-    "": "",
-    top: t,
-    right: r,
-    bottom: b,
+//$standardSpaces: (0, 0.25em, 0.5em, 1em, 2em, 3em, 4em);
+$borderSizes: (
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px
+);
+$sizes: (
+    auto: auto,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%
+);
+$directions: (
+    "": "", 
+    top: t, 
+    right: r, 
+    bottom: b, 
     left: l
 );
 
-$colorStandard: #dee2e6;
-$COLORS: (
-    primary: #007bff,
-    secondary: #6c757d,
-    success: #28a745,
-    danger: #dc3545,
-    warning: #ffc107,
-    info: #17a2b8,
-    light: #f8f9fa,
-    dark: #343a40
+$spacers: (
+    0: 0,
+    1: 0.25em,
+    2: 0.5em,
+    3: 1em,
+    4: 2em,
+    5: 3em,
+    6: 4em,
 );
+
+$deviceSizes: (
+    "": "",
+    sm: "min-width: 576px",
+    md: "min-width: 768px",
+    lg: "min-width: 992px",
+    xl: "min-width: 1200px",
+);
+
+$displays: (none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex);
+$positions: (static, relative, absolute, fixed, sticky);
+$overflows: (auto, hidden);
+
+// $directionsShortForm: (
+//     "": "",
+//     top: t,
+//     right: r,
+//     bottom: b,
+//     left: l
+// );
+
+$colorStandard: #dee2e6;
 $colorPrimary: #007bff;
 $colorSecondary: #6c757d;
 $colorSuccess: #28a745;
@@ -30,3 +60,37 @@ $colorWarning: #ffc107;
 $colorInfo: #17a2b8;
 $colorLight: #f8f9fa;
 $colorDark: #343a40;
+$COLORS: (
+    primary: #007bff,
+    secondary: #6c757d,
+    success: #28a745,
+    danger: #dc3545,
+    warning: #ffc107,
+    info: #17a2b8,
+    body: #212529,
+    light: #f8f9fa,
+    dark: #343a40,
+    white: #fff
+);
+$shadowColors: (
+    "": #000,
+    primary: #007bff,
+    success: #28a745,
+    danger: #dc3545,
+    warning: #ffc107,
+    info: #17a2b8,
+    light: #fff
+);
+
+// Z-index master list (copied from bootstrap 4.3)
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;

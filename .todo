@@ -1,0 +1,3 @@
+1- add  border radius sizes (in bootstrap there is only sm & lg)
+   and if they are set, it automaticlly add it to all corners.
+   Set a size for each rounded class

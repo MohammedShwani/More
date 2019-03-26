@@ -1,0 +1,93 @@
+@import "../variables.scss";
+@import "../helper.scss";
+
+//text color
+// .m-text-body {
+//     color: #212529!important;
+// }
+@each $colorName, $color in $COLORS {
+    .m-text-#{$colorName} {
+        color: $color !important;
+    }
+}
+
+
+//text utilities
+
+@each $deviceName, $deviceValue in $deviceSizes {
+    $spacer: "-";
+    @if $deviceName == "" {
+        $spacer: "";
+    }
+
+    @include mediaDevice($deviceValue) {
+        .m-text#{$spacer + $deviceName}-left {
+            text-align: left !important;
+        }
+        .m-text#{$spacer + $deviceName}-center {
+            text-align: center !important;
+        }
+        .m-text#{$spacer + $deviceName}-right {
+            text-align: right !important;
+        }
+    }
+}
+
+
+.m-text-justify {
+    text-align: justify !important;
+}
+.m-text-wrap {
+    white-space: normal !important;
+}
+.m-text-nowrap {
+    white-space: nowrap !important;
+}
+.m-text-truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+.m-text-break {
+    word-break: break-word !important; // IE & < Edge 18
+    overflow-wrap: break-word !important;
+}
+
+.m-text-lowercase {
+    text-transform: lowercase !important;
+}
+.m-text-uppercase {
+    text-transform: uppercase !important;
+}
+.m-text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.m-font-weight-bold {
+    font-weight: 700 !important;
+}
+.m-font-weight-bolder {
+    font-weight: bolder !important;
+}
+.m-font-weight-normal {
+    font-weight: 400 !important;
+}
+.m-font-weight-light {
+    font-weight: 300 !important;
+}
+.m-font-weight-lighter {
+    font-weight: lighter !important;
+}
+.m-font-italic {
+    font-style: italic !important;
+}
+
+.m-text-monospace {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
+}
+.m-text-reset {
+    color: inherit !important;
+}
+.m-text-decoration-none {
+    text-decoration: none !important;
+}

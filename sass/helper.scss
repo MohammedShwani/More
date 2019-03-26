@@ -8,3 +8,11 @@
 
     @return $number;
 }
+
+@mixin mediaDevice($condition) {
+    @if $condition == "" {
+        @content;
+    } @else {
+        @media ($condition) { @content; }
+    }
+}

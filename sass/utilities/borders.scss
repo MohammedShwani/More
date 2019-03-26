@@ -1,0 +1,89 @@
+@import "../variables.scss";
+
+//border directions
+@each $direction, $directionAbbr in $directions {
+    $seprator: "-";
+    @if $direction == "" {
+        $seprator: "";
+    }
+
+    //normal border
+    .m-border#{$seprator + $directionAbbr} {
+        border#{$seprator + $direction}: 1px solid $colorStandard !important;
+    }
+    //zero border for that direction
+    .m-border-#{$directionAbbr}0 {
+        border#{$seprator + $direction}: 0 !important;
+    }
+}
+
+
+
+//border colors
+@each $colorName, $color in $COLORS {
+    .m-border-#{$colorName} {
+        border-color: $color !important;
+    }
+}
+
+
+
+//border width
+@each $sizeName, $sizeValue in $borderSizes {
+    $spacer: "-w";
+    @if $sizeName == "" {
+        $spacer: "";
+    }
+
+    .m-border#{$spacer + $sizeName} {
+        border-width: $sizeValue !important;
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//radius
+
+.m-rounded-0 {
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+.m-rounded {
+    -webkit-border-radius: 0.3em !important;
+    border-radius: 0.3em !important;
+}
+.m-rounded-t {
+    -webkit-border-top-left-radius: 0.3em !important;
+    -webkit-border-top-right-radius: 0.3em !important;
+    border-top-left-radius: 0.3em !important;
+    border-top-right-radius: 0.3em !important;
+}
+.m-rounded-r {
+    -webkit-border-top-right-radius: 0.3em !important;
+    -webkit-border-bottom-right-radius: 0.3em !important;
+    border-top-right-radius: 0.3em !important;
+    border-bottom-right-radius: 0.3em !important;
+}
+.m-rounded-b {
+    -webkit-border-bottom-left-radius: 0.3em !important;
+    -webkit-border-bottom-right-radius: 0.3em !important;
+    border-bottom-left-radius: 0.3em !important;
+    border-bottom-right-radius: 0.3em !important;
+}
+.m-rounded-l {
+    -webkit-border-top-left-radius: 0.3em !important;
+    -webkit-border-bottom-left-radius: 0.3em !important;
+    border-top-left-radius: 0.3em !important;
+    border-bottom-left-radius: 0.3em !important;
+}
+
+
+.m-rounded-circle {
+    -webkit-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+.m-rounded-pill {
+    -webkit-border-radius: 50rem !important;
+    border-radius: 50rem !important;
+}
