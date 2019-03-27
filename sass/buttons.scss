@@ -1,3 +1,121 @@
+@import "./variables.scss";
+@import "./helper.scss";
+
 .m-btn {
-    padding: 1em;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+
+    &:hover:enabled {
+        color: $colorDark;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    
+    &.m-disabled,
+    &:disabled {
+      opacity: $btnDisabledOpacity;
+      cursor: default;
+    }
+}
+
+
+@each $colorName, $color in $COLORS {
+    $hoverBackground: darken($color, 7.5%);
+    $activeBackground: darken($color, 10%);
+
+    //standard button colors
+    .m-btn-#{$colorName} {
+        background: $color;
+        color: color-yiq($color);
+
+        &:hover:enabled {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            text-decoration: none;
+        }
+
+        &:not(:disabled):not(.m-disabled).m-active {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            text-decoration: none;
+        }
+
+        &:focus,
+        &.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba($color,.5);
+        }
+    }
+
+    //outline button colors
+    .m-btn-outline-#{$colorName} {
+        border-color: $color;
+        color: $color;
+
+        &:hover:enabled {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            text-decoration: none;
+        }
+
+        &:not(:disabled):not(.m-disabled).m-active {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            text-decoration: none;
+        }
+
+        &:focus,
+        &.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba($color,.5);
+        }
+    }
+
+    //basic button colors
+    .m-btn-basic-#{$colorName} {
+        border-color: $colorStandard;
+        color: $colorStandard;
+
+        &:hover:enabled {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            border-color: $hoverBackground;
+            text-decoration: none;
+        }
+
+        &:not(:disabled):not(.m-disabled).m-active {
+            background: $hoverBackground;
+            color: color-yiq($hoverBackground);
+            border-color: $hoverBackground;
+            text-decoration: none;
+        }
+
+        &:focus,
+        &.focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba($color,.5);
+        }
+    }
 }

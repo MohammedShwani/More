@@ -1,0 +1,26 @@
+.m-circle {
+    -webkit-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.m-pill {
+    -webkit-border-radius: 50rem !important;
+    border-radius: 50rem !important;
+
+    &-l {
+        border-top-left-radius: 50rem;
+        border-bottom-left-radius: 50rem;
+    }
+    &-r {
+        border-top-right-radius: 50rem;
+        border-bottom-right-radius: 50rem;
+    }
+    &-t {
+        border-top-right-radius: 50rem;
+        border-top-left-radius: 50rem;
+    }
+    &-b {
+        border-bottom-right-radius: 50rem;
+        border-bottom-left-radius: 50rem;
+    }
+}

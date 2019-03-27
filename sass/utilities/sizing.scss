@@ -35,3 +35,16 @@
 .m-vh-100 {
     height: 100vh !important;
 }
+
+.m-fluid {
+    display: block;
+    width: 100%;
+}
+
+//font sizes also used to set elements sizes (like: buttons, lables, ...)
+@each $sizeName, $sizeValue in $fontSizes {
+    .m-#{$sizeName} {
+        font-size: $sizeValue !important;
+        padding: ($sizeValue / 2) ($sizeValue);
+    }
+}

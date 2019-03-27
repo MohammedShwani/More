@@ -13,6 +13,16 @@ $sizes: (
     75: 75%,
     100: 100%
 );
+$fontSizes: (
+    mini: .78571429rem,
+    tiny: .85714286rem,
+    small: .92857143rem,
+    medium: 1rem,
+    large: 1.14285714rem,
+    big: 1.28571429rem,
+    huge: 1.42857143rem,
+    massive: 1.71428571rem
+);
 $directions: (
     "": "", 
     top: t, 
@@ -94,3 +104,5 @@ $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
 $zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
+
+$btnDisabledOpacity: 0.65;
