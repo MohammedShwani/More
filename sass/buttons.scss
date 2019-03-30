@@ -47,17 +47,17 @@
 
     //standard button colors
     .m-btn-#{$colorName} {
-        background: $color;
+        background-color: $color;
         color: color-yiq($color);
 
         &:hover:enabled {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
         }
 
         &:not(:disabled):not(.m-disabled).m-active {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
         }
@@ -75,13 +75,13 @@
         color: $color;
 
         &:hover:enabled {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
         }
 
         &:not(:disabled):not(.m-disabled).m-active {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
         }
@@ -99,14 +99,14 @@
         color: $colorStandard;
 
         &:hover:enabled {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             border-color: $hoverBackground;
             text-decoration: none;
         }
 
         &:not(:disabled):not(.m-disabled).m-active {
-            background: $hoverBackground;
+            background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             border-color: $hoverBackground;
             text-decoration: none;

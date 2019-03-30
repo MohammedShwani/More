@@ -1,3 +1,11 @@
 1- add  border radius sizes (in bootstrap there is only sm & lg)
    and if they are set, it automaticlly add it to all corners.
    Set a size for each rounded class
+2- Issue found in label outline not working properlly
+3- In labels make darker background and border when hover in for
+   label which are link only (ie: remove it from div and other
+   tags)
+4- (m-tag), check wheather it can be used with other elements or
+   just label, if it can only be used with label then change 
+   its class name into (m-label-tag)
+5- add attached for the right side

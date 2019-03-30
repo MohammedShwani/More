@@ -45,6 +45,6 @@
 @each $sizeName, $sizeValue in $fontSizes {
     .m-#{$sizeName} {
         font-size: $sizeValue !important;
-        padding: ($sizeValue / 2) ($sizeValue);
+        //padding: ($sizeValue / 2) ($sizeValue);
     }
 }
