@@ -6,22 +6,22 @@
         $colorName: "-" + $colorName;
     }
 
-    .m-shadow#{$colorName}-sm {
+    .#{$suffix}shadow#{$colorName}-sm {
         -webkit-box-shadow: 0 .125rem .25rem rgba($color,.075) !important;
         box-shadow: 0 .125rem .25rem rgba($color,.075) !important;
     }
-    .m-shadow#{$colorName} {
+    .#{$suffix}shadow#{$colorName} {
         -webkit-box-shadow: 0 .5rem 1rem rgba($color,.15) !important;
         box-shadow: 0 .5rem 1rem rgba($color,.15) !important;
     }
-    .m-shadow#{$colorName}-lg {
+    .#{$suffix}shadow#{$colorName}-lg {
         -webkit-box-shadow: 0 1rem 3rem rgba($color,.175) !important;
         box-shadow: 0 1rem 3rem rgba($color,.175) !important;
     }
 }
 
 
-.m-shadow-none {
+.#{$suffix}shadow-none {
     box-shadow: none !important;
 }
 

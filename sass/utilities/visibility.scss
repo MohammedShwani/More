@@ -1,6 +1,8 @@
-.m-visible {
+@import "../variables.scss";
+
+.#{$suffix}visible {
     visibility: visible !important;
 }
-.m-invisible {
+.#{$suffix}invisible {
     visibility: hidden !important;
 }

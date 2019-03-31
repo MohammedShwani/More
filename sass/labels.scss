@@ -1,7 +1,7 @@
 @import "./variables.scss";
 @import "./helper.scss";
 
-.m-label {
+.#{$suffix}label {
     display: inline-block;
     padding: .25em .4em;
     font-size: 75%;
@@ -35,7 +35,7 @@
     }
 }
 
-[dir="rtl"] .m-label,[dir="rtl"].m-label  {
+[dir="rtl"] .#{$suffix}label,[dir="rtl"].#{$suffix}label  {
     & img {
         margin: -.25em -.4em -.25em .4em;
         border-radius: 0;
@@ -51,7 +51,7 @@
     }
 }
 
-.m-pointing {
+.#{$suffix}pointing {
     margin-top: 1em;
     &:before {
         position: absolute;
@@ -108,13 +108,13 @@
 }
 
 @each $colorName, $color in $COLORS {
-    .m-label-#{$colorName} {
+    .#{$suffix}label-#{$colorName} {
         background-color: $color;
         border-color: darken($color, 5.5%);
         color: color-yiq($color);
     }
 
-    a.m-label-#{$colorName} {
+    a.#{$suffix}label-#{$colorName} {
         &:hover {
             background-color: darken($color, 9.5%);
             border-color: darken($color, 9.5%);
@@ -122,14 +122,14 @@
         }
     }
 
-    .m-label-outline-#{$colorName} {
+    .#{$suffix}label-outline-#{$colorName} {
         background-color: #fff;
         border: 1px solid $color;
         color: $color;
     }
 }
 
-.m-corner {
+.#{$suffix}corner {
     top: 0;
     left: 0;
     position: absolute;
@@ -233,7 +233,7 @@
     }
 }
 
-.m-tag {
+.#{$suffix}tag {
     padding-left: 1em;
     margin-left: 1em;
 
@@ -267,7 +267,7 @@
     }
 }
 
-.m-ribbon {
+.#{$suffix}ribbon {
     color: #fff;
     margin-left: -1.2em;
     padding-left: 2em;
@@ -287,7 +287,7 @@
     }
 }
 
-.m-attached {
+.#{$suffix}attached {
     position: absolute;
     top: 0;
     left: 0;
@@ -327,7 +327,7 @@
     }
 }
 
-.m-floating {
+.#{$suffix}floating {
     &-r {
         position: absolute;
         top: -1em;

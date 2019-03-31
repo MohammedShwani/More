@@ -13,7 +13,7 @@
                     $spacer: ""
                 }
     
-                .m-#{$abrr}#{$directionAbbr}#{$deviceSize}-#{$space} {
+                .#{$suffix}#{$abrr}#{$directionAbbr}#{$deviceSize}-#{$space} {
                     #{$prop}#{$spacer + $direction}: $value !important;
                 }
             }
@@ -34,7 +34,7 @@
                     $spacer: ""
                 }
 
-                .m-m#{$directionAbbr}#{$deviceSize}-n#{$space} {
+                .#{$suffix}m#{$directionAbbr}#{$deviceSize}-n#{$space} {
                     margin#{$spacer + $direction}: -$value !important;
                 }
             }
@@ -61,22 +61,22 @@
 
 
 //some spacial margin
-.m-m-auto {
+.#{$suffix}m-auto {
     margin: auto !important;
 }
-.m-mt-auto,
-.m-my-auto {
+.#{$suffix}mt-auto,
+.#{$suffix}my-auto {
     margin-top: auto !important;
 }
-.m-mr-auto,
-.m-mx-auto {
+.#{$suffix}mr-auto,
+.#{$suffix}mx-auto {
     margin-right: auto !important;
 }
-.m-mb-auto,
-.m-my-auto {
+.#{$suffix}mb-auto,
+.#{$suffix}my-auto {
     margin-bottom: auto !important;
 }
-.m-ml-auto,
-.m-mx-auto {
+.#{$suffix}ml-auto,
+.#{$suffix}mx-auto {
     margin-left: auto !important;
 }

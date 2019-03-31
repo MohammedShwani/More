@@ -1,14 +1,14 @@
 @import "../variables.scss";
 
 @each $position in $positions {
-    .m-position-#{$position} {
+    .#{$suffix}position-#{$position} {
         position: $position !important;
     }
   }
   
   // Shorthand
   
-  .m-fixed-top {
+  .#{$suffix}fixed-top {
     position: fixed;
     top: 0;
     right: 0;
@@ -16,7 +16,7 @@
     z-index: $zindex-fixed;
   }
   
-  .m-fixed-bottom {
+  .#{$suffix}fixed-bottom {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -24,7 +24,7 @@
     z-index: $zindex-fixed;
   }
   
-  .m-sticky-top {
+  .#{$suffix}sticky-top {
     @supports (position: sticky) {
       position: sticky;
       top: 0;

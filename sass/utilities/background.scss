@@ -2,11 +2,11 @@
 
 //background color
 @each $name, $value in $COLORS {
-    .m-bg-#{$name} {
+    .#{$suffix}bg-#{$name} {
         background-color: $value !important;
     }
 }
 
-.m-bg-transparent {
+.#{$suffix}bg-transparent {
     background-color: transparent !important;
 }

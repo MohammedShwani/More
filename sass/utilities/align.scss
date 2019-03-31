@@ -1,20 +1,21 @@
-//vertical align
+@import "../variables.scss";
 
-.m-align-baseline {
+//vertical align
+.#{$suffix}align-baseline {
     vertical-align: baseline !important;
 }
-.m-align-top {
+.#{$suffix}align-top {
     vertical-align: top !important;
 }
-.m-align-middle {
+.#{$suffix}align-middle {
     vertical-align: middle !important;
 }
-.m-align-bottom {
+.#{$suffix}align-bottom {
     vertical-align: bottom !important;
 }
-.m-align-text-top {
+.#{$suffix}align-text-top {
     vertical-align: text-top !important;
 }
-.m-align-text-bottom {
+.#{$suffix}align-text-bottom {
     vertical-align: text-bottom !important;
 }

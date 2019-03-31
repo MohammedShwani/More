@@ -1,4 +1,6 @@
-.m-clearfix {
+@import "../variables.scss";
+
+.#{$suffix}clearfix {
     &::after {
         display: block;
         clear: both;

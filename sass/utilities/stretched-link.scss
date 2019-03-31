@@ -1,4 +1,6 @@
-.m-stretched-link {
+@import "../variables.scss";
+
+.#{$suffix}stretched-link {
     &::after {
         position: absolute;
         top: 0;

@@ -1,7 +1,7 @@
 @import "./variables.scss";
 @import "./helper.scss";
 
-.m-btn {
+.#{$suffix}btn {
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -33,7 +33,7 @@
         box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     }
     
-    &.m-disabled,
+    &.#{$suffix}disabled,
     &:disabled {
       opacity: $btnDisabledOpacity;
       cursor: default;
@@ -46,7 +46,7 @@
     $activeBackground: darken($color, 10%);
 
     //standard button colors
-    .m-btn-#{$colorName} {
+    .#{$suffix}btn-#{$colorName} {
         background-color: $color;
         color: color-yiq($color);
 
@@ -56,7 +56,7 @@
             text-decoration: none;
         }
 
-        &:not(:disabled):not(.m-disabled).m-active {
+        &:not(:disabled):not(.#{$suffix}disabled).#{$suffix}active {
             background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
@@ -70,7 +70,7 @@
     }
 
     //outline button colors
-    .m-btn-outline-#{$colorName} {
+    .#{$suffix}btn-outline-#{$colorName} {
         border-color: $color;
         color: $color;
 
@@ -80,7 +80,7 @@
             text-decoration: none;
         }
 
-        &:not(:disabled):not(.m-disabled).m-active {
+        &:not(:disabled):not(.#{$suffix}disabled).#{$suffix}active {
             background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             text-decoration: none;
@@ -94,7 +94,7 @@
     }
 
     //basic button colors
-    .m-btn-basic-#{$colorName} {
+    .#{$suffix}btn-basic-#{$colorName} {
         border-color: $colorStandard;
         color: $colorStandard;
 
@@ -105,7 +105,7 @@
             text-decoration: none;
         }
 
-        &:not(:disabled):not(.m-disabled).m-active {
+        &:not(:disabled):not(.#{$suffix}disabled).#{$suffix}active {
             background-color: $hoverBackground;
             color: color-yiq($hoverBackground);
             border-color: $hoverBackground;

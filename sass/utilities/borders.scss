@@ -8,11 +8,11 @@
     }
 
     //normal border
-    .m-border#{$seprator + $directionAbbr} {
+    .#{$suffix}border#{$seprator + $directionAbbr} {
         border#{$seprator + $direction}: 1px solid $colorStandard !important;
     }
     //zero border for that direction
-    .m-border-#{$directionAbbr}0 {
+    .#{$suffix}border-#{$directionAbbr}0 {
         border#{$seprator + $direction}: 0 !important;
     }
 }
@@ -21,7 +21,7 @@
 
 //border colors
 @each $colorName, $color in $COLORS {
-    .m-border-#{$colorName} {
+    .#{$suffix}border-#{$colorName} {
         border-color: $color !important;
     }
 }
@@ -35,7 +35,7 @@
         $spacer: "";
     }
 
-    .m-border#{$spacer + $sizeName} {
+    .#{$suffix}border#{$spacer + $sizeName} {
         border-width: $sizeValue !important;
     }
 }
@@ -45,33 +45,33 @@
 ///////////////////////////////////////////////////////////////////////////////
 //radius
 
-.m-rounded-0 {
+.#{$suffix}rounded-0 {
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
 }
-.m-rounded {
+.#{$suffix}rounded {
     -webkit-border-radius: 0.3em !important;
     border-radius: 0.3em !important;
 }
-.m-rounded-t {
+.#{$suffix}rounded-t {
     -webkit-border-top-left-radius: 0.3em !important;
     -webkit-border-top-right-radius: 0.3em !important;
     border-top-left-radius: 0.3em !important;
     border-top-right-radius: 0.3em !important;
 }
-.m-rounded-r {
+.#{$suffix}rounded-r {
     -webkit-border-top-right-radius: 0.3em !important;
     -webkit-border-bottom-right-radius: 0.3em !important;
     border-top-right-radius: 0.3em !important;
     border-bottom-right-radius: 0.3em !important;
 }
-.m-rounded-b {
+.#{$suffix}rounded-b {
     -webkit-border-bottom-left-radius: 0.3em !important;
     -webkit-border-bottom-right-radius: 0.3em !important;
     border-bottom-left-radius: 0.3em !important;
     border-bottom-right-radius: 0.3em !important;
 }
-.m-rounded-l {
+.#{$suffix}rounded-l {
     -webkit-border-top-left-radius: 0.3em !important;
     -webkit-border-bottom-left-radius: 0.3em !important;
     border-top-left-radius: 0.3em !important;

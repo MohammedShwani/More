@@ -2,48 +2,48 @@
 
 //width
 @each $sizeName, $sizeValue in $sizes {
-    .m-w-#{$sizeName} {
+    .#{$suffix}w-#{$sizeName} {
         width: $sizeValue !important;
     }
 }
 
 //height
 @each $sizeName, $sizeValue in $sizes {
-    .m-h-#{$sizeName} {
+    .#{$suffix}h-#{$sizeName} {
         height: $sizeValue !important;
     }
 }
 
 
-.m-mw-100 {
+.#{$suffix}mw-100 {
     max-width: 100% !important;
 }
-.m-mh-100 {
+.#{$suffix}mh-100 {
     max-height: 100% !important;
 }
 
-.m-min-vw-100 {
+.#{$suffix}min-vw-100 {
     min-width: 100vw !important;
 }
-.m-min-vh-100 {
+.#{$suffix}min-vh-100 {
     min-height: 100vh !important;
 }
 
-.m-vw-100 {
+.#{$suffix}vw-100 {
     width: 100vw !important;
 }
-.m-vh-100 {
+.#{$suffix}vh-100 {
     height: 100vh !important;
 }
 
-.m-fluid {
+.#{$suffix}fluid {
     display: block;
     width: 100%;
 }
 
 //font sizes also used to set elements sizes (like: buttons, lables, ...)
 @each $sizeName, $sizeValue in $fontSizes {
-    .m-#{$sizeName} {
+    .#{$suffix}#{$sizeName} {
         font-size: $sizeValue !important;
         //padding: ($sizeValue / 2) ($sizeValue);
     }

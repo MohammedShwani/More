@@ -13,7 +13,7 @@
 
   @include mediaDevice($deviceValue) {
     @each $value in $displays {
-      .m-d#{$spacer + $deviceName}-#{$value} {
+      .#{$suffix}d#{$spacer + $deviceName}-#{$value} {
         display: $value !important;
       }
     }
@@ -27,6 +27,6 @@
   
 @media print {
   @each $value in $displays {
-    .m-d-print-#{$value} { display: $value !important; }
+    .#{$suffix}d-print-#{$value} { display: $value !important; }
   }
 }

@@ -1,9 +1,11 @@
-.m-circle {
+@import "../variables.scss";
+
+.#{$suffix}circle {
     -webkit-border-radius: 50% !important;
     border-radius: 50% !important;
 }
 
-.m-pill {
+.#{$suffix}pill {
     -webkit-border-radius: 50rem !important;
     border-radius: 50rem !important;
 
