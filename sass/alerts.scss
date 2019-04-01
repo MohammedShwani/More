@@ -1,0 +1,37 @@
+@import "./variables.scss";
+@import "./helper.scss";
+
+.#{$suffix}link {
+    font-weight: bold;
+}
+
+.#{$suffix}alert{
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+}
+
+
+@each $colorName, $color in $COLORS {
+    .#{$suffix}alert-#{$colorName} {
+        color: darken($color, 30%);
+        background-color: lighten($color, 40%);
+        border-color: lighten($color, 35%);
+    }
+}
+
+// below code is not complete
+
+.#{$suffix}alert-dismissible {
+    padding-right: $close-font-size + $alert-padding-x * 2;
+  
+    // Adjust close link position
+    .#{$suffix}close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: $alert-padding-y $alert-padding-x;
+      color: inherit;
+    }
+  }

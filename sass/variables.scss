@@ -107,3 +107,8 @@ $zindex-tooltip:                    1070 !default;
 
 $btnDisabledOpacity: 0.65;
 $suffix: "m-";
+$font-size-base: 1rem;
+
+$close-font-size: $font-size-base * 1.5;
+$alert-padding-y: .75rem;
+$alert-padding-x: 1.25rem;
